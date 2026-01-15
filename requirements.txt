@@ -1,0 +1,5 @@
+numpy==1.24.3
+easyocr
+playwright
+paddleocr==2.7.0.3
+paddlepaddle==2.6.2
