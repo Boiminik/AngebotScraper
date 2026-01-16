@@ -1,5 +1,11 @@
+# numpy passend für EasyOCR + PaddleOCR
 numpy==1.24.3
-easyocr
-playwright
-paddleocr==2.7.0.3
+
+# OpenCV, EasyOCR, PaddleOCR, PaddlePaddle CPU
+easyocr==1.6.2
+opencv-python-headless==4.5.4.60
+paddleocr==2.6.0
 paddlepaddle==2.6.2
+
+# Playwright für Async function im Billa Scraper
+playwright

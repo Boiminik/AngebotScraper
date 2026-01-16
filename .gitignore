@@ -1,2 +1,5 @@
 # Virtuelles Environment
 sale_env/
+__pycache__/
+.env
+*.log

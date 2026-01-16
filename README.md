@@ -1,10 +1,12 @@
 # Angebot Scraper
-Ein Simples Webscraping Script, welches Informationen aus dem HTML Code von Supermarkt Flugblättern in JSON-Dateien abspeichert um anschließend eine Produktsuche zu ermöglichen
-## [angebote_GUI.py](angebote_GUI.py)
-Das Frontend des Projekts. Ein Simples User Interface das die Ausführung von anderen Scripts und die Durchsuchung der JSON-Dateien ermöglicht.
-## [billa_scraper.py](billa_scraper.py)
-Ein Webscraping script, welches die aktuellen Flugblätter von Billa Wien und Billa Plus Wien als JSON-Dateien im archiv speichert. Durch das aktuelle Datum wird immer der derzeit aktuelle Angebotskatalog untersucht. <br> 
-Prozessablauf:
+Ein Simples Webscraping Script, welches Informationen aus dem HTML Code von Supermarkt Flugblättern in JSON-Dateien abspeichert um anschließend eine Produktsuche zu ermöglichen<br>
+
+## [angebote_GUI.py](src\angebote_GUI.py)
+Das Frontend des Projekts. Ein Simples User Interface das die Ausführung von anderen Scripts und die Durchsuchung der JSON-Dateien ermöglicht.<br>
+
+## [billa_scraper.py](src\billa_scraper.py)
+Ein Webscraping script, welches die aktuellen Flugblätter von Billa Wien und Billa Plus Wien als JSON-Dateien im archiv speichert. Durch das aktuelle Datum wird immer der derzeit aktuelle Angebotskatalog untersucht. <br><br>
+<b>Prozessablauf:</b>
 <ul>
   <li>Es wird ausgelesen, wie viel Seiten das Flugblatt insgesamt hat.</li>
   <li>Eine Schleife wird gestartet die die gesamte Seitenanzahl inkrementiert</li>
@@ -19,4 +21,23 @@ Prozessablauf:
   </ul>
   <li>Doppelseiten werden nur einmal aufgerufen, da z.B. sowohl der Aufruf von Seite 2 als auch von Seite 3 die Doppelseiten 2-3 anzeigt und ein doppelter Aufruf für redundante Daten sorgt</li>
 </ul><br>
-Nach dem Prozessablauf wird der Alt-Text und die URL in eine JSON Datei eingetragen, welche im Archiv gespeichert wird.
+Nach dem Prozessablauf wird der Alt-Text und die URL in eine JSON Datei eingetragen, welche im Archiv gespeichert wird.<br>
+
+## Setup
+### Voraussetzungen
+- Python 3.10
+- Windows / Linux / macOS
+
+<i style="color: green">Getestet unter Windows 10 mit Python 3.10.11</i>
+
+### Installation
+```powershell
+git clone https://github.com/Boiminik/AngebotScraper
+cd angebot-scraper
+
+py -3.10 -m venv sale_env
+sale_env/Scripts/activate  
+# Für nicht Windows-User: sale_env\bin\activate
+
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
